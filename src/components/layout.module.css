@@ -1,0 +1,40 @@
+@import url('../styles/variables.css');
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+html, body {
+    height: 100%;
+}
+.content {
+    width: 70%;
+    margin: auto;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: .5rem 0;
+}
+.nav-link-item {
+    padding-right: 2rem;
+}
+.nav-link-item a {
+    color: #000;
+}
+.site-title {
+    font-size: 2rem;
+    color: gray;
+    font-weight: 700;
+}
+.heading {
+    color: var(--heading-color);
+}
+.footer {
+    margin-top: 1rem;
+    color: gray;
+}
+h1 {
+    margin: 0;
+}
