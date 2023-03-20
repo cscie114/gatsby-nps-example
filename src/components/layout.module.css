@@ -23,10 +23,26 @@ html, body {
 .nav-link-item a {
     color: #000;
 }
+.header {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-areas:
+        "logo title"
+        "logo nav";
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+.mainnav {
+    grid-area: nav;
+}
+.logo {
+    grid-area: logo;
+}
 .site-title {
     font-size: 2rem;
     color: gray;
     font-weight: 700;
+    grid-area: title;
 }
 .heading {
     color: var(--heading-color);

@@ -1,9 +1,13 @@
 import * as React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image'
 import {
     content,
     footer,
+    header,
+    logo,
     heading,
+    mainNav,
     navLinks,
     navLinkItem,
     siteTitle,
@@ -28,12 +32,21 @@ const Layout = (props) => {
     // Return the Layout component
     return (
         <div className={content}>
-            <header className={siteTitle}>
-                <h1>{data.site.siteMetadata.title}</h1>
-                <nav>
+            <header className={header}>
+                <div className={logo}>
+                    <StaticImage src="../images/arrowhead.webp" height={100} alt="NPS logo"></StaticImage>
+                </div>
+                <h1 className={siteTitle}>{data.site.siteMetadata.title}</h1>
+                <nav className={mainNav}>
                     <ul className={navLinks}>
                         <li className={navLinkItem}>
                             <Link to="/">Home</Link>
+                        </li>
+                        <li className={navLinkItem}>
+                            <Link to="/parks">All Parks</Link>
+                        </li>
+                        <li className={navLinkItem}>
+                            <Link to="/states">State Parks</Link>
                         </li>
                     </ul>
                 </nav>
