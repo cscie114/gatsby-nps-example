@@ -1,6 +1,6 @@
 @import url('../styles/variables.css');
 
-.park h2 {
+.park h3 {
     color: var(--heading-color);
 }
 .images figure img {

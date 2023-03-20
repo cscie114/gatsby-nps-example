@@ -34,9 +34,9 @@ const Layout = (props) => {
         <div className={content}>
             <header className={header}>
                 <div className={logo}>
-                    <StaticImage src="../images/arrowhead.webp" height={100} alt="NPS logo"></StaticImage>
+                    <StaticImage src="../images/map.png" height={100} alt="NPS logo"></StaticImage>
                 </div>
-                <h1 className={siteTitle}>{data.site.siteMetadata.title}</h1>
+                <h1 className={siteTitle}><Link to="/">{data.site.siteMetadata.title}</Link></h1>
                 <nav className={mainNav}>
                     <ul className={navLinks}>
                         <li className={navLinkItem}>

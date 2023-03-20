@@ -23,6 +23,7 @@ const Seo = ({ title }) => {
 
   return (
     <>
+      <html lang="en" />
       <title>
         {title} | {seo.title}
       </title>

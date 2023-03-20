@@ -6,7 +6,7 @@ import Seo from '../components/seo'
 const StatesPage = ({ data }) => {
     const states = data.allStatesJson.nodes;
     return (
-        <Layout pageTitle="All States">
+        <Layout pageTitle="State Parks">
             <ul>
                 {states.map((state) => {
                     return (
@@ -30,6 +30,6 @@ export const query = graphql`
     }
 `
 
-export const Head = () => <Seo title="Parks"></Seo>
+export const Head = () => <Seo title="States"></Seo>
 
 export default StatesPage

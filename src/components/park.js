@@ -4,13 +4,13 @@ import * as styles from './park.module.css'
 const Park = ({ park }) => {
   return (
     <div className={styles.park}>
-        <h2>{park.fullName}</h2>
+        <h3>{park.fullName}</h3>
         <p>{park.description}</p>
         <p>More information at <a href={park.url}>nps.gov/{park.parkCode}</a></p>
         <div className={styles.images}>
             {park.images.map((img) => (
                 <figure key={img.url}>
-                    <img src={img.url} alt={img.altText } />
+                    <img src={img.url} alt={img.title} />
                     <figcaption>
                         {img.caption}<br/>
                         <i>{img.credit}</i>

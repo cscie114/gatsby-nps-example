@@ -1,17 +1,19 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../../components/layout'
+import Seo from '../../components/seo'
 import Park from '../../components/park'
 
 
 const StatePage = ({ pageContext, data }) => {
-    const stateAbbrev = pageContext.abbreviation;
-    const stateParks = data.allParksJson.nodes;
+    console.log("State", pageContext);
+    const parks = data.allParksJson.nodes;
+    const state = data.allStatesJson.nodes[0];
     return (
-        <Layout title={stateAbbrev}>
-            <h2>{stateAbbrev} Parks</h2>
+        <Layout pageTitle={state.name}>
+            <p>{parks.length} parks in list</p>
+            {parks.map(park => <Park park={park}></Park>)}
             <Link to="/states">Return to list of states</Link>
-            {stateParks.map(park => <Park park={park}></Park>)}
         </Layout>
     );
   };
@@ -40,7 +42,15 @@ const StatePage = ({ pageContext, data }) => {
                 designation
             }
         }
+        allStatesJson(filter: {abbreviation: {eq: $abbreviation}}) {
+            nodes {
+              name
+              abbreviation
+            }
+          }
     }
   `
+
+  export const Head = () => <Seo title="State Parks"></Seo>
 
   export default StatePage
