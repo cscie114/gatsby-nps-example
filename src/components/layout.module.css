@@ -32,7 +32,7 @@ html, body {
     grid-template-columns: 100px 1fr;
     align-items: center;
 }
-.mainnav {
+.main-nav {
     grid-area: nav;
 }
 .logo {

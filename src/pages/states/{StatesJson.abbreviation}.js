@@ -12,7 +12,7 @@ const StatePage = ({ pageContext, data }) => {
     return (
         <Layout pageTitle={state.name}>
             <p>{parks.length} parks in list</p>
-            {parks.map(park => <Park park={park}></Park>)}
+            {parks.map(park => <Park key={park.id} park={park}></Park>)}
             <Link to="/states">Return to list of states</Link>
         </Layout>
     );

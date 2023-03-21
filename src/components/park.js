@@ -8,8 +8,8 @@ const Park = ({ park }) => {
         <p>{park.description}</p>
         <p>More information at <a href={park.url}>nps.gov/{park.parkCode}</a></p>
         <div className={styles.images}>
-            {park.images.map((img) => (
-                <figure key={img.url}>
+            {park.images.map((img, i) => (
+                <figure key={i}>
                     <img src={img.url} alt={img.title} />
                     <figcaption>
                         {img.caption}<br/>
