@@ -3,7 +3,8 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
-const LighthousesPage = ({ data }) => {
+const LighthousesPage = (props) => {
+    const data = props.data;
     const parks = data.allParksJson.nodes;
     return (
         <Layout pageTitle="Parks with Lighthouses">

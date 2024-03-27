@@ -6,7 +6,7 @@ module.exports = {
     title: `Gatsby NPS Example`,
     description: `Example Gatsby project using NPS static data`,
     course: `CSCI E-114`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `http://localhost:8000`,
   },
   plugins: [
     `gatsby-transformer-json`,

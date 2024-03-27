@@ -48,6 +48,9 @@ const Layout = (props) => {
                         <li className={navLinkItem}>
                             <Link to="/states">State Parks</Link>
                         </li>
+                        <li className={navLinkItem}>
+                            <Link to="/lighthouses">Lighthouses</Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -56,7 +59,7 @@ const Layout = (props) => {
                 {children}
             </main>
             <footer className={footer}>
-                Example developed for CSCI E-114, Spring 2023.
+                Example developed for CSCI E-114, Spring 2024.
             </footer>
         </div>
     )
